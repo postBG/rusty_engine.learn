@@ -21,5 +21,11 @@ impl Default for GameState {
 fn main() {
     let mut game = Game::new();
 
+    game.add_logic(game_logic);
     game.run(GameState::default());
+}
+
+fn game_logic(engine: &mut Engine, game_state: &mut GameState) {
+    game_state.current_score += 1;
+    println!("Current Score: {}", game_state.current_score);
 }
