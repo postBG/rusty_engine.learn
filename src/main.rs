@@ -1,8 +1,8 @@
 use rusty_engine::prelude::*;
 
 struct GameState {
-    // high_score: u32,
-    current_score: u32,
+    high_score: u32,
+    score: u32,
     target_index: i32,
     // spawn_timer: Timer,
 }
@@ -10,8 +10,8 @@ struct GameState {
 impl Default for GameState {
     fn default() -> Self {
         Self {
-            // high_score: 0,
-            current_score: 0,
+            high_score: 0,
+            score: 0,
             target_index: 0,
             // spawn_timer: Timer::from_seconds(1.0, false),
         }
@@ -39,8 +39,8 @@ fn game_logic(engine: &mut Engine, game_state: &mut GameState) {
                     engine.sprites.remove(&label);
                 }
             }
-            game_state.current_score += 1;
-            println!("Current score: {}", game_state.current_score);
+            game_state.score += 1;
+            println!("Current score: {}", game_state.score);
         }
     }
 
