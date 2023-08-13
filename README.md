@@ -1,5 +1,4 @@
 # rusty_engine_tutorial
-https://cleancut.github.io/rusty_engine/00-welcome.html
 
 ## How to Set Up
 
